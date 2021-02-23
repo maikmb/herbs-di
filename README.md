@@ -35,7 +35,11 @@ Make sure you have [Node.js](http://nodejs.org/) installed.
 git clone https://github.com/maikmb/herbs-di.git # or clone your own fork
 cd herbs-di
 npm install
-npm start
 ```
 
-Your app should now be running on [localhost:5000](http://localhost:5000/).
+
+## Scripts
+
+- `dev:console` to run an example di container console
+- `dev:express` to run an API with express middleware for the di container
+- `dev:gql` to run an api with graphql middleware for the di container

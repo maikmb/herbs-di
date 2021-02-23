@@ -1,8 +1,8 @@
-const { HerbsContainer } = require("./core/herbs-di")
-const { userRepository } = require("./core/sources/userRepository");
-const { UserService } = require("./core/sources/userService");
-const { getUsersUseCase } = require("./core/sources/getUsersUseCase");
-const cache = require("./core/sources/cache");
+const { HerbsContainer } = require("../../../core/herbs-di")
+const { userRepository } = require("./examples/userRepository");
+const { UserService } = require("./examples/userService");
+const { getUsersUseCase } = require("./examples/getUsersUseCase");
+const cache = require("../cache");
 
 async function run() {
     const container = new HerbsContainer();
