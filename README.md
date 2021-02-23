@@ -17,16 +17,6 @@ const useCase = container.factoryContainer().getUsersUseCase;
 var output = await useCase.run({ name: 'Kenedy' });
 ```
 
-
-Make sure you have [Node.js](http://nodejs.org/) installed.
-
-```sh
-git clone https://github.com/maikmb/herbs-di.git # or clone your own fork
-cd herbs-di
-npm install
-npm start
-```
-
 ## Running Examples Locally
 
 Make sure you have [Node.js](http://nodejs.org/) installed.
