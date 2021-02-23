@@ -1,0 +1,20 @@
+{
+  "name": "herbs-di",
+  "version": "1.0.0",
+  "description": "denpendency container for herbsjs",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "node index.js --inspect",
+    "test": "test"
+  },
+  "keywords": [
+    "herbs",
+    "di"
+  ],
+  "author": "Maik Braga",
+  "license": "ISC",
+  "dependencies": {
+    "buchu": "^1.0.10"
+  }
+}
