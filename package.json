@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "denpendency container for herbsjs",
   "main": "index.js",
-  "scripts": {    
+  "scripts": {
     "dev:console": "node examples/console/index.js --inspect",
     "dev:express": "node examples/express/index.js --inspect",
     "dev:gql": "node examples/gql/index.js --inspect",
@@ -16,6 +16,7 @@
   "author": "Maik Braga",
   "license": "ISC",
   "dependencies": {
-    "buchu": "^1.0.10"
+    "buchu": "^1.0.10",
+    "express": "^4.17.1"
   }
 }

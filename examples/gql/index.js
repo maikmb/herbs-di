@@ -1,7 +1,7 @@
 const { HerbsContainer } = require("../../../core/herbs-di")
-const { userRepository } = require("./examples/userRepository");
-const { UserService } = require("./examples/userService");
-const { getUsersUseCase } = require("./examples/getUsersUseCase");
+const { userRepository } = require("../sources/userRepository");
+const { UserService } = require("../sources/userService");
+const { getUsersUseCase } = require("../sources/getUsersUseCase");
 const cache = require("../cache");
 
 async function run() {
@@ -13,10 +13,7 @@ async function run() {
         .addAsValue('cache', cache)
         .addAsFunction(getUsersUseCase);
 
-    const useCase = container.factoryContainer().getUsersUseCase;
-    var output = await useCase.run({});
-
-    console.log(output);
+    throw new Error("Graphql not implemented")
 }
 
 run();

@@ -1,6 +1,6 @@
 # HerbsDI
 
-Herbs Dependency Injection Container Core
+Herbs Simple Container Services
 
 ## Purpose
 
@@ -27,9 +27,30 @@ cd herbs-di
 npm install
 ```
 
+## Express middleware
+
+To use HerbsJS with express serve you can use `useHerbsDi` middleware to configure container like bellow:
+
+```sh
+const app = express()
+const port = 3000
+
+app.use(useHerbsDi(injection))
+
+app.get('/', async (req, res) => {
+    const { getUsersUseCase } = req.injection;
+    const ret = await getUsersUseCase.run({ name: 'Jhon' });
+    if (ret.isOk) {
+        res.send({ users: ret.value });
+        return;
+    }
+    res.send({ error: ret.err })
+})
+```
+
 
 ## Scripts
 
 - `dev:console` to run an example di container console
 - `dev:express` to run an API with express middleware for the di container
-- `dev:gql` to run an api with graphql middleware for the di container
+- `dev:gql` to run an api with graphql middleware for the di container (**under construction**)

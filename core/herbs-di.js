@@ -11,7 +11,7 @@ class HerbsContainer {
         if (this.sources[source.name]);
         this.sources[source.name] = function newClass() {
             return Reflect.construct(source, arguments)
-        };
+          };
         return this;
     }
 

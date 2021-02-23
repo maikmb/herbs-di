@@ -3,7 +3,7 @@ const { Ok, Err, usecase, step } = require('buchu');
 const getUsersUseCase = (injection) => usecase('get all users from cache service', {
 
     // Input/Request type validation 
-    request: {},
+    request: { name: String },
 
     // Dependency Injection control
     setup: (ctx) => ctx.di = injection,
